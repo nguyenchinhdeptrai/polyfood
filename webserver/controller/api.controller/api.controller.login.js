@@ -6,6 +6,7 @@ const jwt = require("jsonwebtoken");
 const api_url =
   "mongodb+srv://chinhnvph23300:MbbrR9S0zud0X3iF@cluster0.f0j8ggm.mongodb.net/folyfoods?retryWrites=true&w=majority";
 const jwtSecret = "my-key";
+
 //
 exports.register = async (req, res, next) => {
   try {
@@ -45,6 +46,7 @@ exports.register = async (req, res, next) => {
     return res.status(500).json({ error: err.message });
   }
 };
+
 //
 exports.loginUser = async (req, res, next) => {
   try {
